@@ -4,6 +4,14 @@
 
 让多个 AI 助手围桌讨论，交叉评价，深度协作。支持 Claude、ChatGPT、Gemini、DeepSeek、Kimi、豆包、ChatGLM 等主流 AI 平台。
 
+## 📸 项目截图
+
+### 普通模式
+![普通模式界面](./screen/normal-mode.png)
+
+### 讨论模式
+![讨论模式界面](./screen/discussion-mode.png)
+
 ## ✨ 新增特性
 
 相比原项目，本版本新增：
