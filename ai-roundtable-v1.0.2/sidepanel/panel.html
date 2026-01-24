@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI-CrossTalk</title>
+  <link rel="stylesheet" href="panel.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>AI-CrossTalk</h1>
+    </header>
+
+    <section class="pairing-section">
+      <h2>配对信息</h2>
+
+      <div class="info-row">
+        <label>Extension ID</label>
+        <div class="copy-field" id="extension-id-container" title="点击复制">
+          <code id="extension-id">加载中...</code>
+          <svg class="copy-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path>
+          </svg>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <label>配对码</label>
+        <div class="pairing-code-wrapper">
+          <div class="copy-field pairing-code-field" id="pairing-code-container" title="点击复制">
+            <code id="pairing-code" class="pairing-code">------</code>
+          </div>
+          <button class="icon-btn" id="refresh-code-btn" title="刷新配对码">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M23 4v6h-6M1 20v-6h6M3.51 9a9 9 0 0114.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0020.49 15"/>
+            </svg>
+          </button>
+        </div>
+        <span class="hint" id="pairing-hint">有效期 5:00</span>
+      </div>
+    </section>
+
+    <section class="action-section">
+      <button class="action-btn" id="open-dashboard-btn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
+          <polyline points="15 3 21 3 21 9"></polyline>
+          <line x1="10" y1="14" x2="21" y2="3"></line>
+        </svg>
+        打开控制台
+      </button>
+    </section>
+
+    <section class="ai-section">
+      <h2>AI 状态</h2>
+      
+      <div class="ai-group">
+        <div class="group-label">US</div>
+        <div class="ai-list">
+          <div class="ai-item" data-ai="claude">
+            <img src="../icons/ai/claude-color.svg" class="ai-icon" alt="Claude">
+            <span class="ai-name">Claude</span>
+            <span class="status-dot" id="status-claude"></span>
+          </div>
+          <div class="ai-item" data-ai="chatgpt">
+            <img src="../icons/ai/chatgpt-color.svg" class="ai-icon" alt="ChatGPT">
+            <span class="ai-name">ChatGPT</span>
+            <span class="status-dot" id="status-chatgpt"></span>
+          </div>
+          <div class="ai-item" data-ai="gemini">
+            <img src="../icons/ai/gemini-color.svg" class="ai-icon" alt="Gemini">
+            <span class="ai-name">Gemini</span>
+            <span class="status-dot" id="status-gemini"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ai-group">
+        <div class="group-label">CN</div>
+        <div class="ai-list">
+          <div class="ai-item" data-ai="deepseek">
+            <img src="../icons/ai/deepseek-color.svg" class="ai-icon" alt="DeepSeek">
+            <span class="ai-name">DeepSeek</span>
+            <span class="status-dot" id="status-deepseek"></span>
+          </div>
+          <div class="ai-item" data-ai="kimi">
+            <img src="../icons/ai/kimi-color.svg" class="ai-icon" alt="Kimi">
+            <span class="ai-name">Kimi</span>
+            <span class="status-dot" id="status-kimi"></span>
+          </div>
+          <div class="ai-item" data-ai="doubao">
+            <img src="../icons/ai/doubao-color.svg" class="ai-icon" alt="Doubao">
+            <span class="ai-name">Doubao</span>
+            <span class="status-dot" id="status-doubao"></span>
+          </div>
+          <div class="ai-item" data-ai="chatglm">
+            <img src="../icons/ai/chatglm-color.svg" class="ai-icon" alt="ChatGLM">
+            <span class="ai-name">ChatGLM</span>
+            <span class="status-dot" id="status-chatglm"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="log-section">
+      <h2>日志</h2>
+      <div id="log-container"></div>
+    </section>
+
+    <footer class="copyright">
+      © 2025 <a href="https://axtonliu.ai" target="_blank">Axton Liu</a> · <a href="https://axtonliu.ai"
+        target="_blank">AI 精英学院</a>
+      <br>
+      <a href="https://github.com/chosenx-gpu" target="_blank" style="font-size: 9px; opacity: 0.8;">Edit by CHOSENX</a>
+    </footer>
+  </div>
+
+  <script src="panel.js"></script>
+</body>
+
+</html>
